@@ -20,7 +20,6 @@ Getting fertilizer recommendations wrong doesn't just hurt yields — it wastes 
 - [Submission format](#submission-format)
 - [Run locally](#run-locally)
 - [Repo structure](#repo-structure)
-- [Future work](#future-work)
 - [License](#license)
 
 ---
@@ -106,20 +105,11 @@ id,Fertilizer Name
 ## Run locally
 
 ```bash
-git clone https://github.com/your-username/fertilizer-prediction.git
+git clone https://github.com/Kaushal-2371/fertilizer-prediction.git
 cd fertilizer-prediction
 pip install -r requirements.txt
 jupyter notebook fertilizer-prediction.ipynb
 ```
-
-**requirements.txt**
-```
-pandas numpy matplotlib seaborn scikit-learn xgboost jupyter
-```
-
-> To run on Kaggle, add the [Playground Series S5E6](https://www.kaggle.com/competitions/playground-series-s5e6) dataset and click *Run All*.
-
----
 
 ## Repo structure
 
@@ -131,20 +121,6 @@ fertilizer-prediction/
 ├── requirements.txt
 └── README.md
 ```
-
----
-
-## Future work
-
-- [ ] EDA — visualise feature distributions, class balance, NPK profiles per fertilizer
-- [ ] Feature engineering — NPK ratios, soil-crop interaction terms
-- [ ] Hyperparameter tuning — RandomizedSearchCV / Optuna for both models
-- [ ] LightGBM — typically faster and competitive with XGBoost on tabular data
-- [ ] Probability calibration — better-calibrated probabilities → better MAP@3
-- [ ] Ensemble — average softmax probabilities from RF + XGBoost before ranking top-3
-- [ ] Cross-validation — use OOF predictions instead of training on the full set blindly
-
----
 
 ## License
 
